@@ -1,4 +1,4 @@
-import Hero from "./sections/Hero";
+import Hero3D from "./sections/Hero3D";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import About from "./sections/About";
@@ -8,7 +8,7 @@ import Contact from "./sections/Contact";
 function App() {
   return (
     <div style={{ fontFamily: "Inter, Arial, sans-serif", background: "#111", minHeight: "100vh" }}>
-      <Hero />
+      <Hero3D />
       <Projects />
       <Skills />
       <About />
