@@ -7,11 +7,11 @@ import Contact from "./sections/Contact";
 
 function App() {
   return (
-    <div style={{ fontFamily: "Inter, Arial, sans-serif", background: "#111", minHeight: "100vh" }}>
+    <div style={{ minHeight: "100vh", background: "#070c17" }}>
       <Hero3D />
-      <Projects />
-      <Skills />
       <About />
+      <Skills />
+      <Projects />
       <Experience />
       <Contact />
     </div>

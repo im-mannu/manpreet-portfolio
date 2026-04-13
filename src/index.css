@@ -1,13 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes floatCard {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #070c17;
+  color: #f7f8fb;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@keyframes floatParticle {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes orbDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0) rotate(1.5deg);
+  }
+}
+
+.orb-shell {
+  transform-origin: 258px 260px;
+  animation: orbShellSpin 14s linear infinite;
+}
+
+.orb-core {
+  transform-origin: 258px 260px;
+  animation: orbCoreSpin 10s ease-in-out infinite alternate;
+}
+
+@keyframes orbShellSpin {
+  0% {
+    transform: rotate(0deg) scaleX(0.94) scaleY(1.02);
+  }
+  25% {
+    transform: rotate(90deg) scaleX(1.02) scaleY(0.95);
+  }
+  50% {
+    transform: rotate(180deg) scaleX(0.92) scaleY(1.03);
+  }
+  75% {
+    transform: rotate(270deg) scaleX(1.03) scaleY(0.94);
+  }
+  100% {
+    transform: rotate(360deg) scaleX(0.94) scaleY(1.02);
+  }
+}
+
+@keyframes orbCoreSpin {
+  0% {
+    transform: rotate(-14deg) scale(0.98);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.01);
+  }
+  100% {
+    transform: rotate(16deg) scale(0.98);
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-layout {
+    grid-template-columns: 1fr !important;
+    padding-top: 72px !important;
+    gap: 8px !important;
+  }
+
+  .hero-nav {
+    display: none !important;
+  }
+
+  .hero-actions {
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-layout {
+    padding: 64px 20px 84px !important;
+  }
+
+  .hero-actions a[aria-label="LinkedIn"],
+  .hero-actions a[aria-label="GitHub"] {
+    display: none !important;
+  }
 }

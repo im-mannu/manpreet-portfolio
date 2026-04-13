@@ -1,115 +1,196 @@
-// src/sections/Projects.js
 import React from "react";
 
 const projects = [
   {
+    name: "FittedCloset",
+    category: "AI-Powered Fashion",
+    description: "Built a production-grade digital wardrobe app with AI-driven styling flows for a US audience and helped scale it to 600K+ iOS downloads.",
+    tags: ["React Native", "TypeScript", "AI Features"],
+    links: [
+      { label: "App Store", url: "https://apps.apple.com/in/app/fitted/id6596771952" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.fittedcloset.app" }
+    ]
+  },
+  {
     name: "nhance Health",
-    description: "Personalized health and wellness app with HealthKit integration, food logging, and mindfulness.",
-    features: [
-      "Health Activity Tracking (Apple HealthKit)",
-      "Smart Food Logging",
-      "Daily Calorie Insights",
-      "Personalized Onboarding",
-      "Meditation Content"
-    ],
+    category: "Healthcare & Wellness",
+    description: "Shipped a personalized wellness app with Apple HealthKit integration, food logging, onboarding, and mindfulness experiences.",
+    tags: ["React Native", "HealthKit", "Firebase"],
     links: [
       { label: "App Store", url: "https://apps.apple.com/in/app/nhance-health/id6758241469" }
     ]
   },
   {
-    name: "FittedCloset",
-    description: "AI-powered digital wardrobe and styling assistant. 600K+ downloads on iOS (USA)",
-    links: [
-      { label: "iOS", url: "https://apps.apple.com/in/app/fitted/id6596771952" },
-      { label: "Android", url: "https://play.google.com/store/apps/details?id=com.fittedcloset.app" }
-    ]
-  },
-  {
     name: "BIG4 Health",
-    description: "Healthcare and wellness platform for health tracking and appointment management.",
+    category: "Health Platform",
+    description: "Delivered a healthcare application for tracking, routines, and appointment-focused user journeys across iOS and Android.",
+    tags: ["React Native", "Appointments", "Cross-Platform"],
     links: [
-      { label: "iOS", url: "https://apps.apple.com/us/app/big4-health/id1517973481" },
-      { label: "Android", url: "https://play.google.com/store/apps/details?id=com.big4healthapp" }
+      { label: "App Store", url: "https://apps.apple.com/us/app/big4-health/id1517973481" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.big4healthapp" }
     ]
   },
   {
     name: "Little Floh",
-    description: "Community marketplace app for buying, selling, and trading items locally.",
+    category: "Marketplace",
+    description: "Built a community marketplace experience with buyer-seller flows, local discovery, and polished mobile-first UX.",
+    tags: ["React Native", "Marketplace", "Payments"],
     links: [
-      { label: "iOS", url: "https://apps.apple.com/us/app/little-floh/id6470370015" },
-      { label: "Android", url: "https://play.google.com/store/apps/details?id=com.littlefloh.app" }
-    ]
-  },
-  {
-    name: "N8tive Nightlife",
-    description: "Nightlife discovery app for events and social connections.",
-    links: [
-      { label: "iOS", url: "https://apps.apple.com/us/app/n8tive-nightlife/id6469099525" }
+      { label: "App Store", url: "https://apps.apple.com/us/app/little-floh/id6470370015" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.littlefloh.app" }
     ]
   },
   {
     name: "JG Vacation",
-    description: "Travel planning application with curated itineraries and bookings.",
+    category: "Travel & Booking",
+    description: "Created a travel planning product with itinerary, booking, and discovery workflows optimized for real users and store deployment.",
+    tags: ["React Native", "Travel", "Store Launch"],
     links: [
-      { label: "iOS", url: "https://apps.apple.com/us/app/jg-vacation/id6452726337" },
-      { label: "Android", url: "https://play.google.com/store/apps/details?id=com.jgvacation.app" }
+      { label: "App Store", url: "https://apps.apple.com/us/app/jg-vacation/id6452726337" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.jgvacation.app" }
     ]
   },
   {
     name: "JG Calendar",
-    description: "Smart calendar application for scheduling and reminders.",
+    category: "Productivity",
+    description: "Built a smart calendar application focused on scheduling, reminders, and easy date management across iOS and Android.",
+    tags: ["React Native", "Calendar", "Cross-Platform"],
     links: [
-      { label: "iOS", url: "https://apps.apple.com/us/app/jg-calendar/id6463896471" },
-      { label: "Android", url: "https://play.google.com/store/apps/details?id=com.jgcalendar" }
+      { label: "App Store", url: "https://apps.apple.com/us/app/jg-calendar/id6463896471" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.jgcalendar" }
     ]
   },
   {
     name: "Chummy",
-    description: "Social networking app to discover and connect with nearby friends.",
+    category: "Social Networking",
+    description: "Delivered a social discovery app with location-aware flows and people-first interactions across both major mobile platforms.",
+    tags: ["React Native", "Social", "Location"],
     links: [
-      { label: "iOS", url: "https://apps.apple.com/us/app/chummy-find-real-friends/id6738577443" },
-      { label: "Android", url: "https://play.google.com/store/apps/details?id=com.wolfpackfindfriends" }
+      { label: "App Store", url: "https://apps.apple.com/us/app/chummy-find-real-friends/id6738577443" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.wolfpackfindfriends" }
     ]
   },
   {
     name: "In Common",
-    description: "Community discovery application to find shared destinations and communities.",
+    category: "Community Discovery",
+    description: "Shipped a community-focused app to help users discover destinations, shared interests, and connection opportunities with a polished mobile flow.",
+    tags: ["React Native", "Discovery", "Mobile UX"],
     links: [
-      { label: "iOS", url: "https://apps.apple.com/us/app/in-common-find-destinations/id6747021185" },
-      { label: "Android", url: "https://play.google.com/store/apps/details?id=com.incommon.app" }
+      { label: "App Store", url: "https://apps.apple.com/us/app/in-common-find-destinations/id6747021185" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.incommon.app" }
+    ]
+  },
+  {
+    name: "N8tive Nightlife",
+    category: "Lifestyle & Events",
+    description: "Delivered a nightlife discovery product centered around event exploration, venue engagement, and social-first experiences.",
+    tags: ["React Native", "Events", "User Engagement"],
+    links: [
+      { label: "App Store", url: "https://apps.apple.com/us/app/n8tive-nightlife/id6469099525" }
     ]
   }
 ];
 
+const sectionTitleStyle = {
+  margin: 0,
+  fontSize: "clamp(2.7rem, 4vw, 4.2rem)",
+  fontWeight: 900,
+  letterSpacing: -1.6,
+  background: "linear-gradient(90deg,#38bdf8 0%, #3b82f6 100%)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent"
+};
+
 export default function Projects() {
   return (
-    <section id="projects" style={{ background: "#23232a", color: "#fff", padding: "60px 0" }}>
-      <div style={{ maxWidth: 900, margin: "auto", padding: 20 }}>
-        <h2 style={{ fontSize: "2.2rem", fontWeight: 700, marginBottom: 40 }}>Projects</h2>
-        {projects.map((proj, idx) => (
-          <div key={proj.name} style={{ marginBottom: 36, background: "#18181b", borderRadius: 12, padding: 24, boxShadow: "0 2px 12px #0002" }}>
-            <h3 style={{ fontSize: "1.3rem", margin: 0 }}>{proj.name}</h3>
-            <p style={{ margin: "10px 0 0 0" }}>{proj.description}</p>
-            {proj.features && (
-              <ul style={{ margin: "10px 0 0 0", paddingLeft: 20 }}>
-                {proj.features.map(f => <li key={f}>{f}</li>)}
-              </ul>
-            )}
-            <div style={{ marginTop: 10 }}>
-              {proj.links.map(link => (
-                <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" style={{
-                  background: "#6366f1",
-                  color: "#fff",
-                  padding: "6px 18px",
-                  borderRadius: 6,
-                  textDecoration: "none",
-                  marginRight: 10,
-                  fontWeight: 500
-                }}>{link.label}</a>
-              ))}
-            </div>
-          </div>
-        ))}
+    <section
+      id="projects"
+      style={{
+        background: "#0a1120",
+        color: "#fff",
+        padding: "92px 20px 82px"
+      }}
+    >
+      <div style={{ maxWidth: 1220, margin: "0 auto" }}>
+        <div style={{ textAlign: "center", maxWidth: 720, margin: "0 auto 42px" }}>
+          <h2 style={sectionTitleStyle}>Selected Work</h2>
+          <p style={{ color: "#94a3b8", fontSize: 20, lineHeight: 1.7 }}>
+            A full list of live mobile products I&apos;ve shipped across healthcare,
+            social, marketplace, travel, productivity, and AI-led consumer apps.
+          </p>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: 22
+          }}
+        >
+          {projects.map((project) => (
+            <article
+              key={project.name}
+              style={{
+                padding: 26,
+                borderRadius: 20,
+                background: "rgba(15, 23, 42, 0.72)",
+                border: "1px solid rgba(148,163,184,0.14)",
+                boxShadow: "0 18px 40px rgba(2,6,23,0.28)"
+              }}
+            >
+              <h3 style={{ margin: 0, fontSize: 24, fontWeight: 900 }}>{project.name}</h3>
+              <div
+                style={{
+                  marginTop: 8,
+                  fontSize: 12,
+                  fontWeight: 700,
+                  color: "#94a3b8",
+                  letterSpacing: 1.6,
+                  textTransform: "uppercase"
+                }}
+              >
+                {project.category}
+              </div>
+
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 18 }}>
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    style={{
+                      padding: "7px 12px",
+                      borderRadius: 999,
+                      background: "rgba(255,255,255,0.05)",
+                      border: "1px solid rgba(148,163,184,0.14)",
+                      color: "#e2e8f0",
+                      fontWeight: 600,
+                      fontSize: 13
+                    }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <p style={{ margin: "20px 0 0", color: "#aebacf", lineHeight: 1.72, fontSize: 20 }}>
+                {project.description}
+              </p>
+
+              <div style={{ marginTop: 22, paddingTop: 18, borderTop: "1px solid rgba(148,163,184,0.12)", display: "flex", gap: 16, flexWrap: "wrap" }}>
+                {project.links.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#22d3ee", textDecoration: "none", fontWeight: 800, fontSize: 15 }}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

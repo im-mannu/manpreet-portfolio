@@ -1,80 +1,245 @@
-// src/sections/Hero3D.js
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Html } from "@react-three/drei";
+import React from "react";
+import { motion } from "framer-motion";
 
-function GlowingRing() {
-  return (
-    <mesh>
-      <torusGeometry args={[2, 0.15, 32, 100]} />
-      <meshStandardMaterial emissive="#00eaff" color="#00eaff" emissiveIntensity={1.5} />
-    </mesh>
-  );
-}
+const palette = {
+  text: "#f8fafc",
+  muted: "#94a3b8",
+  cyan: "#22d3ee"
+};
 
-function FloatingParticles() {
-  const particles = Array.from({ length: 60 });
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6 }
+  })
+};
+
+function Showcase() {
+  const apps = [
+    "/apps/app1.png",
+    "/apps/app2.png",
+    "/apps/app3.png",
+    "/apps/app4.png",
+    "/apps/app5.png"
+  ];
+
   return (
-    <group>
-      {particles.map((_, i) => (
-        <mesh key={i} position={[
-          Math.sin(i) * 3 + Math.random() * 0.5,
-          Math.cos(i) * 3 + Math.random() * 0.5,
-          (Math.random() - 0.5) * 2
-        ]}>
-          <sphereGeometry args={[0.05, 8, 8]} />
-          <meshStandardMaterial color="#00eaff" emissive="#00eaff" emissiveIntensity={2} />
-        </mesh>
-      ))}
-    </group>
+    <div style={{
+      width: "100%",
+      height: 500,
+      perspective: 1200,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+      <motion.div
+        animate={{ rotateY: 360 }}
+        transition={{
+          repeat: Infinity,
+          duration: 20,
+          ease: "linear"
+        }}
+        style={{
+          position: "relative",
+          width: 300,
+          height: 400,
+          transformStyle: "preserve-3d"
+        }}
+      >
+        {apps.map((src, i) => {
+          const angle = (360 / apps.length) * i;
+
+          return (
+            <motion.img
+              key={i}
+              src={src}
+              style={{
+                position: "absolute",
+                width: 200,
+                height: 380,
+                objectFit: "cover",
+                borderRadius: 20,
+                left: "50%",
+                top: "50%",
+                transform: `
+                  rotateY(${angle}deg)
+                  translateZ(320px)
+                  translate(-50%, -50%)
+                `,
+                boxShadow: "0 30px 80px rgba(0,0,0,0.7)",
+                border: "1px solid rgba(255,255,255,0.1)"
+              }}
+            />
+          );
+        })}
+      </motion.div>
+    </div>
   );
 }
 
 export default function Hero3D() {
   return (
-    <section style={{ minHeight: "70vh", background: "#18181b", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
-      <div style={{ width: "350px", height: "350px", margin: "0 auto" }}>
-        <Canvas camera={{ position: [0, 0, 7], fov: 50 }} shadows>
-          <ambientLight intensity={0.7} />
-          <pointLight position={[0, 0, 5]} intensity={1.2} />
-          <Suspense fallback={null}>
-            <GlowingRing />
-            <FloatingParticles />
-            <Html center>
-              <div style={{
-                width: 120,
-                height: 120,
-                borderRadius: "50%",
-                overflow: "hidden",
-                boxShadow: "0 0 40px #00eaff99",
-                border: "4px solid #00eaff",
-                background: "#222"
+    <section style={{
+      minHeight: "100vh",
+      background: "linear-gradient(180deg,#020617,#070c17)",
+      color: palette.text
+    }}>
+
+      {/* HEADER */}
+      <header
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "20px 24px",
+          display: "grid",
+          gridTemplateColumns: "1fr auto 1fr",
+          alignItems: "center"
+        }}
+      >
+        {/* LEFT */}
+        <div style={{ fontWeight: 800, fontSize: 20 }}>
+          Work <span style={{ color: "#22d3ee" }}>Portfolio</span>
+        </div>
+
+        {/* CENTER (perfectly centered now) */}
+        <div style={{ display: "flex", gap: 28, justifyContent: "center" }}>
+          <a href="#projects">Work</a>
+          <a href="#skills">Expertise</a>
+          <a href="#experience">Experience</a>
+        </div>
+
+        {/* RIGHT */}
+        <div style={{
+          display: "flex",
+          gap: 16,
+          justifyContent: "flex-end",
+          alignItems: "center"
+        }}>
+          <a href="https://linkedin.com/in/manpreet-singh-0101b5203/" target="_blank">
+            in
+          </a>
+
+          <a href="mailto:manpreethamb@gmail.com">
+            Mail
+          </a>
+
+          <a
+            href="#contact"
+            style={{
+              padding: "10px 18px",
+              borderRadius: 10,
+              background: "linear-gradient(90deg,#22d3ee,#7c3aed)",
+              color: "#fff",
+              textDecoration: "none",
+              fontWeight: 600
+            }}
+          >
+            Let’s Talk
+          </a>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <div style={{
+        maxWidth: 1200,
+        margin: "0 auto",
+        padding: "80px 24px",
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        alignItems: "center",
+        gap: 40
+      }}>
+
+        <div>
+          <motion.div variants={fadeUp} initial="hidden" animate="show">
+            <div style={{ color: "#fff", fontSize: 22, fontWeight: 700, marginBottom: 6 }}>
+              HI, I'M MANPREET SINGH,
+            </div>
+          </motion.div>
+
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={3}
+            style={{
+              marginTop: 20,
+              color: palette.cyan,
+              maxWidth: 480,
+              lineHeight: 1.6,
+              fontSize: "clamp(2rem, 2vw, 4rem)",
+              fontWeight: 900,
+            }}
+          >
+            React Native Developer with 4+ years of experience delivering
+            production-ready apps across healthcare, social, and AI-powered products.
+          </motion.p>
+
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={3.5}
+            style={{
+              marginTop: 10,
+              color: "#cbd5f5",
+              fontSize: 16
+            }}
+          >
+            15+ apps shipped • 600K+ users • Production scale experience
+          </motion.p>
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={4}
+            style={{ marginTop: 20, display: "flex", gap: 10 }}
+          >
+            {["15+ Apps", "600K+ Users", "Production Ready"].map(i => (
+              <span key={i} style={{
+                padding: "6px 12px",
+                borderRadius: 999,
+                background: "rgba(255,255,255,0.05)",
+                fontSize: 12
               }}>
-                {/* Place your avatar image below */}
-                <img src="/avatar.png" alt="Manpreet Singh" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-              </div>
-            </Html>
-          </Suspense>
-          <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1.5} />
-        </Canvas>
-      </div>
-      <h1 style={{ fontSize: "2.5rem", fontWeight: 700, margin: "30px 0 0 0" }}>Manpreet Singh</h1>
-      <h2 style={{ fontSize: "1.3rem", fontWeight: 400, color: "#a3a3a3", margin: "10px 0 0 0" }}>
-        Senior React Native Developer
-      </h2>
-      <p style={{ maxWidth: 600, textAlign: "center", margin: "30px 0 0 0", fontSize: "1.1rem" }}>
-        Building scalable cross-platform mobile apps for global clients. 4+ years experience. 8+ live apps. 600K+ downloads.
-      </p>
-      <div style={{ marginTop: 30 }}>
-        <a href="#contact" style={{
-          background: "#6366f1",
-          color: "#fff",
-          padding: "12px 32px",
-          borderRadius: 8,
-          textDecoration: "none",
-          fontWeight: 600,
-          fontSize: "1rem"
-        }}>Contact Me</a>
+                {i}
+              </span>
+            ))}
+          </motion.div>
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            custom={5}
+            style={{ marginTop: 24, display: "flex", gap: 12 }}
+          >
+            <a href="#projects" style={{
+              padding: "12px 20px",
+              borderRadius: 10,
+              background: "linear-gradient(90deg,#22d3ee,#7c3aed)",
+              color: "#fff",
+              textDecoration: "none"
+            }}>
+              View Work
+            </a>
+
+            <a href="#contact" style={{
+              padding: "12px 20px",
+              borderRadius: 10,
+              border: "1px solid rgba(255,255,255,0.2)",
+              color: "#fff",
+              textDecoration: "none"
+            }}>
+              Hire Me
+            </a>
+          </motion.div>
+        </div>
+
+        <Showcase />
       </div>
     </section>
   );
