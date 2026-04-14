@@ -117,7 +117,11 @@ export default function Hero3D() {
           justifyContent: "flex-end",
           alignItems: "center"
         }}>
-          <a href="https://linkedin.com/in/manpreet-singh-0101b5203/" target="_blank">
+          <a
+            href="https://linkedin.com/in/manpreet-singh-0101b5203/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             in
           </a>
 
