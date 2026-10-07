@@ -2,23 +2,36 @@ import React from "react";
 
 const jobs = [
   {
-    label: "Current Role",
-    title: "Senior React Native Developer",
-    company: "Fitted, Remote, US",
-    period: "Jul 2025 - Present",
+    label: "Current Lead Role",
+    title: "Lead React Native Developer (Product)",
+    company: "Shine Dezign Infonet Pvt. Ltd., Mohali",
+    period: "06/2026 - Present",
     description:
-      "Leading the end-to-end development of a US consumer mobile product with React Native and TypeScript, owning architecture decisions, release quality, performance tuning, and feature delivery from idea to production.",
+      "Leading cross-platform client architecture and mobile development for FuelLab.fit, an AI-powered sports nutrition, hydration, and match-day planning platform engineered for athletes.",
     points: [
+      "Architected cross-platform client with React Native, TypeScript, and Redux Toolkit for high-frequency user tracking and 60fps responsiveness.",
+      "Engineered personalized athletic workflows: match/training schedules, hydration metrics, macro breakdowns, and AI-driven meal recommendations.",
+      "Owned end-to-end store deployment pipelines, testing, performance profiling, and production releases on the Apple App Store and Google Play Store."
+    ]
+  },
+  {
+    label: "Product Engineering",
+    title: "Senior React Native Developer",
+    company: "Fitted (US Product Co.), via Netinnovatus IT Solutions",
+    period: "07/2025 - 04/2026",
+    description:
+      "Led end-to-end development of a US consumer mobile product with React Native and TypeScript, owning architecture decisions, release quality, performance tuning, and scaling.",
+    points: [
+      "Scaled app to 600K+ iOS downloads, built MVVM architecture, integrated AI styling flows, and managed CI/CD store cycles.",
       "Designed scalable application structure using reusable modules and clean component architecture.",
-      "Integrated AI-powered flows, Firebase services, secure APIs, and production-ready analytics patterns.",
-      "Handled deployments, debugging, quality improvements, CI/CD-oriented delivery, and ongoing release ownership for a fast-moving consumer product."
+      "Integrated AI-powered flows, Firebase services, secure APIs, and production-ready analytics patterns."
     ]
   },
   {
     label: "React Native Delivery",
     title: "React Native Developer",
     company: "Indi IT Solutions, Mohali",
-    period: "Oct 2024 - May 2025",
+    period: "10/2024 - 05/2025",
     description:
       "Built and maintained cross-platform mobile applications for client products, focusing on real-time communication, subscriptions, store readiness, and stable feature delivery.",
     points: [
@@ -31,7 +44,7 @@ const jobs = [
     label: "Product Engineering",
     title: "Senior React Native Developer",
     company: "Owebest Technologies Pvt. Ltd., Jaipur",
-    period: "Jun 2023 - Sep 2024",
+    period: "06/2023 - 09/2024",
     description:
       "Worked across multiple mobile products in healthcare, dating, and family management domains, translating product ideas into polished and maintainable mobile experiences.",
     points: [
@@ -44,7 +57,7 @@ const jobs = [
     label: "Early Growth",
     title: "React Native Developer",
     company: "Netset Software Solutions, Mohali",
-    period: "Jan 2022 - Jun 2023",
+    period: "01/2022 - 06/2023",
     description:
       "Built the foundation of my production experience by working on diverse healthcare, social, and business applications with a strong focus on practical integrations and stable delivery.",
     points: [

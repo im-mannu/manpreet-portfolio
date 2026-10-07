@@ -2,22 +2,23 @@ import React from "react";
 
 const projects = [
   {
-    name: "FittedCloset",
+    name: "FuelLab.fit",
+    category: "AI Sports Nutrition & Planning",
+    description: "Lead mobile development for an AI-powered cricket nutrition, hydration, and match-day planning platform engineered for athletes across iOS and Android.",
+    tags: ["React Native", "TypeScript", "AI Workflows", "Redux Toolkit"],
+    links: [
+      { label: "App Store", url: "https://apps.apple.com/us/app/fuellab-cricket-sports/id6757917456" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.fuellabfit.app" }
+    ]
+  },
+  {
+    name: "Fitted Closet",
     category: "AI-Powered Fashion",
     description: "Built a production-grade digital wardrobe app with AI-driven styling flows for a US audience and helped scale it to 600K+ iOS downloads.",
     tags: ["React Native", "TypeScript", "AI Features"],
     links: [
       { label: "App Store", url: "https://apps.apple.com/in/app/fitted/id6596771952" },
       { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.fittedcloset.app" }
-    ]
-  },
-  {
-    name: "nhance Health",
-    category: "Healthcare & Wellness",
-    description: "Shipped a personalized wellness app with Apple HealthKit integration, food logging, onboarding, and mindfulness experiences.",
-    tags: ["React Native", "HealthKit", "Firebase"],
-    links: [
-      { label: "App Store", url: "https://apps.apple.com/in/app/nhance-health/id6758241469" }
     ]
   },
   {
@@ -41,23 +42,12 @@ const projects = [
     ]
   },
   {
-    name: "JG Vacation",
-    category: "Travel & Booking",
-    description: "Created a travel planning product with itinerary, booking, and discovery workflows optimized for real users and store deployment.",
-    tags: ["React Native", "Travel", "Store Launch"],
+    name: "N8tive Nightlife",
+    category: "Lifestyle & Events",
+    description: "Delivered a nightlife discovery product centered around event exploration, venue engagement, and social-first experiences.",
+    tags: ["React Native", "Events", "User Engagement"],
     links: [
-      { label: "App Store", url: "https://apps.apple.com/us/app/jg-vacation/id6452726337" },
-      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.jgvacation.app" }
-    ]
-  },
-  {
-    name: "JG Calendar",
-    category: "Productivity",
-    description: "Built a smart calendar application focused on scheduling, reminders, and easy date management across iOS and Android.",
-    tags: ["React Native", "Calendar", "Cross-Platform"],
-    links: [
-      { label: "App Store", url: "https://apps.apple.com/us/app/jg-calendar/id6463896471" },
-      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.jgcalendar" }
+      { label: "App Store", url: "https://apps.apple.com/us/app/n8tive-nightlife/id6469099525" }
     ]
   },
   {
@@ -81,12 +71,23 @@ const projects = [
     ]
   },
   {
-    name: "N8tive Nightlife",
-    category: "Lifestyle & Events",
-    description: "Delivered a nightlife discovery product centered around event exploration, venue engagement, and social-first experiences.",
-    tags: ["React Native", "Events", "User Engagement"],
+    name: "JG Vacation",
+    category: "Travel & Booking",
+    description: "Created a travel planning product with itinerary, booking, and discovery workflows optimized for real users and store deployment.",
+    tags: ["React Native", "Travel", "Store Launch"],
     links: [
-      { label: "App Store", url: "https://apps.apple.com/us/app/n8tive-nightlife/id6469099525" }
+      { label: "App Store", url: "https://apps.apple.com/us/app/jg-vacation/id6452726337" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.jgvacation.app" }
+    ]
+  },
+  {
+    name: "JG Calendar",
+    category: "Productivity",
+    description: "Built a smart calendar application focused on scheduling, reminders, and easy date management across iOS and Android.",
+    tags: ["React Native", "Calendar", "Cross-Platform"],
+    links: [
+      { label: "App Store", url: "https://apps.apple.com/us/app/jg-calendar/id6463896471" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.jgcalendar" }
     ]
   }
 ];

@@ -177,8 +177,8 @@ export default function Hero3D() {
               fontWeight: 900,
             }}
           >
-            React Native Developer with 4+ years of experience delivering
-            production-ready apps across healthcare, social, and AI-powered products.
+            Lead & Senior React Native Developer with 4.5+ years of experience delivering
+            production-ready apps across AI platforms, sports nutrition, healthcare, and consumer products.
           </motion.p>
 
           <motion.p
@@ -192,7 +192,7 @@ export default function Hero3D() {
               fontSize: 16
             }}
           >
-            15+ apps shipped • 600K+ users • Production scale experience
+            20+ apps shipped • 15+ store releases • 600K+ downloads • Production scale experience
           </motion.p>
 
           <motion.div
@@ -200,9 +200,9 @@ export default function Hero3D() {
             initial="hidden"
             animate="show"
             custom={4}
-            style={{ marginTop: 20, display: "flex", gap: 10 }}
+            style={{ marginTop: 20, display: "flex", gap: 10, flexWrap: "wrap" }}
           >
-            {["15+ Apps", "600K+ Users", "Production Ready"].map(i => (
+            {["4.5+ Years Exp.", "20+ Apps Shipped", "15+ Store Releases", "600K+ Downloads"].map(i => (
               <span key={i} style={{
                 padding: "6px 12px",
                 borderRadius: 999,

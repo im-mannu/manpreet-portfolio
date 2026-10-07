@@ -171,7 +171,7 @@ export default function Contact() {
               Manpreet<span style={{ color: "#22d3ee" }}>.</span>
             </div>
             <div style={{ marginTop: 12, color: "#94a3b8", fontSize: 20, lineHeight: 1.6, maxWidth: 360 }}>
-              Senior React Native Developer building polished mobile products for
+              Lead &amp; Senior React Native Developer building polished mobile products for
               real users and real production environments.
             </div>
           </div>

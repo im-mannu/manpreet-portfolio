@@ -2,15 +2,16 @@
 import React from "react";
 
 const badges = [
-  "React Native Expert",
+  "Lead React Native Dev",
   "TypeScript First",
   "AI Integrations",
-  "Open To Work"
+  "Product Engineering"
 ];
 
 const stats = [
-  { value: "4+", label: "Years Exp." },
-  { value: "8+", label: "Apps Shipped" },
+  { value: "4.5+", label: "Years Exp." },
+  { value: "20+", label: "Apps Shipped" },
+  { value: "15+", label: "Store Releases" },
   { value: "600K+", label: "Downloads Reached" }
 ];
 
@@ -253,8 +254,8 @@ export default function About() {
             }}
           >
             I&apos;m <span style={{ color: "#1fe0ff", fontWeight: 800 }}>Manpreet Singh</span>, a
-            Senior React Native Developer with 4+ years of experience building
-            scalable cross-platform apps for clients in India, the US, and global
+            Lead &amp; Senior React Native Developer with 4.5+ years of production mobile
+            engineering experience building scalable cross-platform apps for US, Indian, and global
             markets.
           </p>
 
@@ -267,11 +268,10 @@ export default function About() {
               lineHeight: 1.8
             }}
           >
-            My work spans consumer and B2B mobile products, dating applications,
-            health and wellness apps, gig and logistics platforms, real-time
-            systems, React.js admin portals, CI/CD pipelines, and polished App
-            Store and Play Store launches. I focus on building stable products
-            that feel fast, reliable, and ready for scale.
+            Currently leading mobile product development on FuelLab.fit—an AI-powered sports nutrition,
+            hydration, and match-day planning platform engineered for athletes across iOS and Android. My work spans AI-enabled platforms,
+            consumer and B2B products, dating applications, health and wellness solutions, gig and logistics
+            platforms, real-time systems, and independent App Store and Google Play Store launches.
           </p>
 
           <p
@@ -283,12 +283,11 @@ export default function About() {
               lineHeight: 1.8
             }}
           >
-            I&apos;ve independently delivered 8+ production mobile apps, including a
-            US iOS product that crossed 600K+ downloads, while working across
-            MVVM architecture, performance optimization, HealthKit integration,
-            payment systems like Stripe and Zen Cash, CometChat SDK, ZEGOCLOUD
-            audio-video calling, API integrations, Railway-hosted backend
-            services, and AI-powered feature development.
+            With 20+ production apps delivered and 15+ independent App Store &amp; Google Play
+            deployments, I have scaled mobile products to over 600K+ downloads (including the Fitted iOS
+            app). My technical capabilities cover MVVM architecture, Redux Toolkit, AI workflows,
+            Apple HealthKit integrations, payments (Stripe, Zen Cash), real-time communications (CometChat,
+            ZEGOCLOUD), CI/CD pipelines, and 60fps performance profiling.
           </p>
 
           <p
@@ -300,11 +299,9 @@ export default function About() {
               lineHeight: 1.8
             }}
           >
-            I work comfortably in Agile and Scrum environments, communicate well
-            with designers, backend teams, and stakeholders, and take ownership
-            of delivery from implementation to deployment. That combination of
-            technical depth and execution reliability is what makes me a strong
-            hire for product-focused engineering teams.
+            I work comfortably in Agile and Scrum environments, communicate well with designers,
+            backend teams, and product stakeholders, and take complete ownership of delivery from
+            architecture to production release.
           </p>
 
           <div
