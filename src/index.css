@@ -1,4 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #09090b;
+  --bg-secondary: #0c0d12;
+  --border-color: #27272a;
+  --accent-cyan: #06b6d4;
+}
 
 * {
   box-sizing: border-box;
@@ -6,117 +17,94 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-@keyframes floatCard {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
+  color-scheme: dark;
 }
 
 body {
   margin: 0;
-  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #070c17;
-  color: #f7f8fb;
+  font-family: "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #09090b;
+  color: #f4f4f5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-a {
-  color: inherit;
+/* Linear / Vercel style dot-grid background pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-#root {
-  min-height: 100vh;
+.bg-dot-mesh {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.07) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+/* Glassmorphism & Borders */
+.glass-panel {
+  background: rgba(12, 13, 18, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-@keyframes floatParticle {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -10px, 0);
-  }
+.glass-panel-subtle {
+  background: rgba(18, 19, 26, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-@keyframes orbDrift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate3d(0, -8px, 0) rotate(1.5deg);
-  }
+.glow-card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.orb-shell {
-  transform-origin: 258px 260px;
-  animation: orbShellSpin 14s linear infinite;
+.glow-card:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 30px -10px rgba(6, 182, 212, 0.15);
 }
 
-.orb-core {
-  transform-origin: 258px 260px;
-  animation: orbCoreSpin 10s ease-in-out infinite alternate;
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-@keyframes orbShellSpin {
-  0% {
-    transform: rotate(0deg) scaleX(0.94) scaleY(1.02);
-  }
-  25% {
-    transform: rotate(90deg) scaleX(1.02) scaleY(0.95);
-  }
-  50% {
-    transform: rotate(180deg) scaleX(0.92) scaleY(1.03);
-  }
-  75% {
-    transform: rotate(270deg) scaleX(1.03) scaleY(0.94);
-  }
-  100% {
-    transform: rotate(360deg) scaleX(0.94) scaleY(1.02);
-  }
+::-webkit-scrollbar-track {
+  background: #09090b;
 }
 
-@keyframes orbCoreSpin {
-  0% {
-    transform: rotate(-14deg) scale(0.98);
-  }
-  50% {
-    transform: rotate(2deg) scale(1.01);
-  }
-  100% {
-    transform: rotate(16deg) scale(0.98);
-  }
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+  border: 2px solid #09090b;
 }
 
-@media (max-width: 980px) {
-  .hero-layout {
-    grid-template-columns: 1fr !important;
-    padding-top: 72px !important;
-    gap: 8px !important;
-  }
-
-  .hero-nav {
-    display: none !important;
-  }
-
-  .hero-actions {
-    gap: 12px !important;
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
 }
 
-@media (max-width: 640px) {
-  .hero-layout {
-    padding: 64px 20px 84px !important;
-  }
+/* Subtle badge shine */
+@keyframes shimmerAnim {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
 
-  .hero-actions a[aria-label="LinkedIn"],
-  .hero-actions a[aria-label="GitHub"] {
-    display: none !important;
-  }
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  transform: translateX(-100%);
+  animation: shimmerAnim 4s infinite ease-in-out;
 }

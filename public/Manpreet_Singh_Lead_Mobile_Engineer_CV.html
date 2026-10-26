@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manpreet Singh - Lead & Senior Mobile Engineer CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #09090b;
+      --card-bg: #12131a;
+      --text-main: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent: #06b6d4;
+      --border: #27272a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.55;
+      padding: 40px 20px;
+    }
+    .cv-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #0d0e14;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 28px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .name-title h1 { font-size: 32px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+    .name-title h2 { font-size: 17px; font-weight: 600; color: var(--accent); margin-top: 4px; }
+    .name-title p { font-size: 13px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; margin-top: 4px; }
+    .contacts { font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted); text-align: right; }
+    .contacts a { color: var(--accent); text-decoration: none; }
+    .badges-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .badge-card {
+      background: #14151f;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+    .badge-card .num { font-size: 18px; font-weight: 700; color: #fff; font-family: 'JetBrains Mono', monospace; }
+    .badge-card .lbl { font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .section { margin-top: 32px; }
+    .section-title {
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .summary-text { font-size: 13.5px; color: #d4d4d8; line-height: 1.6; }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .tech-item {
+      background: #14151f;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12.5px;
+    }
+    .tech-item strong { display: block; color: #fff; margin-bottom: 3px; font-size: 13px; }
+    .tech-item span { color: var(--text-muted); }
+    .job { margin-bottom: 24px; position: relative; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 4px; }
+    .job-title { font-size: 15px; font-weight: 700; color: #fff; }
+    .job-company { font-size: 13px; font-weight: 600; color: var(--accent); }
+    .job-date { font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted); }
+    .job-desc { font-size: 13px; color: #d4d4d8; margin: 4px 0 8px; }
+    .job-bullets { list-style: disc; padding-left: 18px; font-size: 12.5px; color: #d4d4d8; }
+    .job-bullets li { margin-bottom: 5px; }
+    .print-actions {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .btn-print {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 10px 22px;
+      font-weight: 700;
+      font-size: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    @media print {
+      body { background: #fff; color: #000; padding: 0; }
+      .cv-container { max-width: 100%; border: none; padding: 0; box-shadow: none; background: #fff; color: #111; }
+      .print-actions { display: none; }
+      .name-title h1 { color: #000; }
+      .name-title h2, .section-title, .contacts a, .job-company { color: #0891b2; }
+      .name-title p, .contacts, .badge-card .lbl, .tech-item span, .job-date { color: #555; }
+      .badge-card, .tech-item { background: #f8fafc; border-color: #e2e8f0; color: #111; }
+      .badge-card .num, .tech-item strong, .job-title { color: #000; }
+      .summary-text, .job-desc, .job-bullets { color: #222; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-actions">
+    <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+  <div class="cv-container">
+    <div class="header">
+      <div class="name-title">
+        <h1>Manpreet Singh</h1>
+        <h2>Lead & Senior Mobile Engineer (React Native & Fullstack)</h2>
+        <p>Cross-Platform Architecture • Offline-First Sync • 600K+ Downloads</p>
+      </div>
+      <div class="contacts">
+        <div>Email: <a href="mailto:manpreethamb@gmail.com">manpreethamb@gmail.com</a></div>
+        <div>Phone: +91 8802390007</div>
+        <div>Location: Mohali, India (Global Remote)</div>
+        <div>LinkedIn: <a href="https://linkedin.com/in/manpreet-singh-0101b5203/" target="_blank">manpreet-singh-0101b5203</a></div>
+      </div>
+    </div>
+
+    <div class="badges-row">
+      <div class="badge-card">
+        <div class="num">4.9+ YRS</div>
+        <div class="lbl">Production Exp</div>
+      </div>
+      <div class="badge-card">
+        <div class="num">20+ APPS</div>
+        <div class="lbl">Production Shipped</div>
+      </div>
+      <div class="badge-card">
+        <div class="num">15+ RELEASES</div>
+        <div class="lbl">App & Play Store</div>
+      </div>
+      <div class="badge-card">
+        <div class="num">600K+</div>
+        <div class="lbl">User Downloads</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Executive Summary</div>
+      <p class="summary-text">
+        Product-focused Lead Mobile Engineer with 4.9+ years architecting and scaling cross-platform mobile systems for US, Indian, and international product companies. Proven record scaling consumer applications past 600K+ iOS downloads, driving 60 FPS rendering on data-intensive charting interfaces, engineering offline-first local cache synchronization (MMKV / SQLite / WatermelonDB), and orchestrating independent store release pipelines with Fastlane and automated CI/CD.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Technical Architecture & Stack</div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <strong>Core Mobile Engine</strong>
+          <span>React Native (CLI & Expo), TypeScript, Swift/Kotlin Native Modules, Shopify FlashList, React Navigation v6/v7, Reanimated 3</span>
+        </div>
+        <div class="tech-item">
+          <strong>State & Offline Synchronization</strong>
+          <span>Redux Toolkit, RTK Query, MVVM Architecture, MMKV, SQLite, WatermelonDB, WebSockets / Socket.IO</span>
+        </div>
+        <div class="tech-item">
+          <strong>Real-Time & Hardware SDKs</strong>
+          <span>Apple HealthKit Telemetry, ZEGOCLOUD Audio/Video, CometChat SDK, Mapbox SDK, Stripe Payments</span>
+        </div>
+        <div class="tech-item">
+          <strong>Release Engineering & CI/CD</strong>
+          <span>Fastlane, App Store Connect, Google Play Console Release Management, GitLab CI/CD, GitHub Actions</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Lead React Native Developer (Product)</span>
+            <span class="job-company"> · Shine Dezign Infonet (FuelLab.fit)</span>
+          </div>
+          <span class="job-date">06/2026 – Present</span>
+        </div>
+        <p class="job-desc">Leading mobile client architecture for FuelLab.fit, an AI sports nutrition and match-day planning platform for professional athletes.</p>
+        <ul class="job-bullets">
+          <li>Architected cross-platform client with React Native, TypeScript, and Redux Toolkit for high-frequency user tracking and 60 FPS responsiveness.</li>
+          <li>Engineered offline-first local data synchronization utilizing MMKV and SQLite, guaranteeing zero-latency match-day access in athletic venues.</li>
+          <li>Sustained 60 FPS UI rendering across complex meal scheduling timelines, hydration curves, and dynamic macro ring charts.</li>
+          <li>Owned end-to-end store deployment pipelines, testing, performance profiling, and production releases on Apple App Store & Google Play Store.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Senior React Native Developer</span>
+            <span class="job-company"> · Fitted (US Product Co., via Netinnovatus)</span>
+          </div>
+          <span class="job-date">07/2025 – 04/2026</span>
+        </div>
+        <p class="job-desc">Led end-to-end development of a US consumer mobile product with React Native and TypeScript, owning architecture and scaling.</p>
+        <ul class="job-bullets">
+          <li>Scaled app to 600K+ iOS downloads, built MVVM component structure, integrated AI styling flows, and managed CI/CD store cycles.</li>
+          <li>Migrated heavy image catalogs to Shopify FlashList with cell recycling to eliminate scroll lag across thousands of catalog items.</li>
+          <li>Implemented custom native camera bridges and client-side image compression, reducing upload latency by 45%.</li>
+          <li>Integrated Firebase backend APIs, automated CI/CD deployment workflows, and store compliance.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-title">React Native Developer</span>
+            <span class="job-company"> · Indi IT Solutions</span>
+          </div>
+          <span class="job-date">10/2024 – 05/2025</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Implemented real-time chat, WebSocket flows, CometChat SDK, and ZEGOCLOUD audio-video calling pipelines.</li>
+          <li>Delivered multi-currency Stripe payment gateways, subscription entitlement management, and cross-platform store verification.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Senior React Native Developer</span>
+            <span class="job-company"> · Owebest Technologies Pvt. Ltd.</span>
+          </div>
+          <span class="job-date">06/2023 – 09/2024</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Delivered healthcare telemetry apps (nHance Health) with direct Apple HealthKit biometrics integration and complex scheduling workflows.</li>
+          <li>Built React.js admin dashboards to support operations and API lifecycle governance.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
